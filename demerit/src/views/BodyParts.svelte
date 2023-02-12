@@ -1,8 +1,11 @@
-<script></script>
+<script>
+
+    import Button from "../components/Button.svelte";
+
+</script>
 
 <div class="bodypart">
-
-    <slot></slot>
+    <Button printbutton={true} buttonText={"print"}/>
 </div>
 
 <style lang="scss">
