@@ -5,7 +5,7 @@
 
 </script>
 
-<button class="clickbutton" class:printbutton={printbutton === true}>{buttonText}</button>
+<button class="clickbutton" class:printbutton={printbutton === true} on:click>{buttonText}</button>
 
 <style lang="scss">
 
