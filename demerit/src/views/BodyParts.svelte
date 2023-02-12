@@ -1,10 +1,13 @@
 <script>
 
     import Button from "../components/Button.svelte";
+    import TextArea from "../components/TextArea.svelte";
 
 </script>
 
 <div class="bodypart">
+    <TextArea/>
+    <br>
     <Button printbutton={true} buttonText={"print"}/>
 </div>
 
