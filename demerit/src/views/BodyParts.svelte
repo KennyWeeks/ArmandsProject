@@ -4,6 +4,7 @@
 
     import Button from "../components/Button.svelte";
     import TextArea from "../components/TextArea.svelte";
+    import Input from "../components/Input.svelte";
     var textArea;
 
     onMount(async ()=>{
@@ -13,6 +14,11 @@
 </script>
 
 <div class="bodypart">
+
+    <Input labelTag="Demerit-points"/><br>
+    <Input labelTag="Time"/><br>
+    <Input labelTag="Infaction"/><br>
+    <Input labelTag="Who-assigned-the-demerit"/><br>
     <TextArea/>
     <br>
     <Button printbutton={true} buttonText={"print"} on:click={()=>{
