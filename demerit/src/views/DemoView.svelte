@@ -28,6 +28,30 @@
 
     <h3 id="infraction">Infraction:</h3>
 
+    <p id="infraction-starting-line">I earned <span id="demerit-points">(#)</span> demerit points at approximately <span id="time">(time)</span> for a/an <span id="infraction-space">(infraction)</span>. <span id="assigned">(Who assigned
+    you the demerits, if Capt. Spell out Captain)</span> assigned me this demerit report because <span id="demerit-description">...</span></p>
+
+    <table cellspacing="0">
+        <colgroup>
+            <col span="1" style="width: 0%;">
+            <col span="1" style="width: 45%;">
+            <col span="1" style="width: 30%;">
+            <col span="1" style="width: 25%;">
+        </colgroup>
+        <tr>
+            <td></td>
+            <td>Recruit Signature</td>
+            <td>HR #</td>
+            <td>Date</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Academy Staff Signature</td>
+            <td>HR #</td>
+            <td>Date</td>
+        </tr>
+    </table>
+
 </div>
 
 <style lang="scss">
@@ -36,7 +60,7 @@
         /*This is gonna be the piece of paper*/
         width:calc(8.5*96px);
         height:calc(11*96px);
-        box-shadow:0 0 0 1px #000;
+        box-shadow:inset 0 0 0 1px #000;
         position:absolute;
         top:100vh;
         left:50%;
@@ -78,6 +102,31 @@
             font-weight:normal;
             margin-left:96px;
             font-size:16px;
+        }
+
+        #infraction-starting-line {
+            width:calc(6.5*96px);
+            margin-left:96px;
+            font-size:15.25px;
+        }
+
+        table {
+            width:calc(6.5*96px + 2px);
+            border-bottom:0.25px solid #000;
+            border-right:0.25px solid #000;
+            position:absolute;
+            bottom:96px;
+            left:96px;
+
+            tr > td {
+                box-shadow:inset 0 0 0 0.25px #000;
+                overflow:hidden;
+                padding:10px;
+                padding-top:5px;
+                padding-bottom:35px;
+                font-style:italic;
+                font-size:14px;
+            }
         }
     }
 

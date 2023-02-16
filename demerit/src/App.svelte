@@ -6,7 +6,15 @@
 <main>
 	<BodyParts/>
 	<DemoView/>
+	<div id="test"></div>
 </main>
 
 <style>
+
+	#test {
+		height:50px;
+		width:100px;
+		position:absolute;
+		top:calc(100vh + (11*96px));
+	}
 </style>
