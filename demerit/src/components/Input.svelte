@@ -3,11 +3,12 @@
     export let labelTag = "";
     export let type="text";
     export let def = "";
+    export let min = null;
 
 </script>
 
-<label for="{labelTag}">{labelTag}</label><br>
-<input type="{type}" name="{labelTag}" class="inputtag" required/>
+<label for="{labelTag}">{labelTag.replace(/-/g, " ")}</label><br>
+<input type="{type}" name="{labelTag}" class="inputtag" placeholder="{def}" min={min}  required/>
 
 
 <style lang="scss">

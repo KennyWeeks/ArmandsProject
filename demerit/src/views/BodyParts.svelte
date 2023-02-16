@@ -23,10 +23,10 @@
 
 <div class="bodypart">
 
-    <Input labelTag="Demerit-points" type="number"/><br>
+    <Input labelTag="Demerit-points" type="number" def="0" min={0}/><br>
     <Input labelTag="Time" type="time"/><br>
     <Input labelTag="Infaction"/><br>
-    <Input labelTag="Who-assigned-the-demerit"/><br>
+    <Input labelTag="Who-assigned-the-demerit" def="Captain ..."/><br>
     <TextArea/>
     <br>
     <Button printbutton={true} buttonText={"print"} on:click={()=>{
