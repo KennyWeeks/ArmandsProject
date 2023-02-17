@@ -13,7 +13,28 @@
     export let window;
 
     var printCommand = ()=>{
-        window.print()
+        let mainContent = document.getElementById("main-component");
+        let height = 8.5 * 96;
+        let width = 11 * 96;
+        var newWindow = window.open("", "PRINT", `height=${height}px, width=${width}px`);
+        newWindow.document.write("<div id='main-component'></div>");
+        var testing = newWindow.document.getElementById("main-component");
+        testing.style.cssText = window.getComputedStyle(mainContent).cssText;
+        var t = window.getComputedStyle(mainContent);
+        console.log(t);
+        for(let key in t) {
+            //console.log(key + " -> " + t[key]);
+            if(key == "height") {
+                let h = (parseInt(t[key]) - 2 * 96) 
+                let string = key + ": " + h + "; box-shadow: inset 0 0 0 1px #000;";
+                testing.style.cssText = string;
+            }
+        }
+        testing.innerHTML = mainContent.innerHTML;
+        //newWindow.document.write(mainContent.innerHTML);
+        //var testing = newWindow.document.getElementById("main-component");
+        console.log(testing);
+        newWindow.focus();
     }
 
     onMount(async ()=>{
@@ -23,6 +44,7 @@
         points = document.getElementById("demerit-points");
         inputs = document.getElementsByTagName("input");
         assigner = document.getElementById("assigned");
+        
     });
 
 </script>

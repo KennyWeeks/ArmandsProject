@@ -67,6 +67,7 @@
         transform:translate(-50%);
         margin-bottom:10px;
         overflow:hidden;
+        background-color:#00ff00;
 
         img {
             margin-top:calc(1*96px);
