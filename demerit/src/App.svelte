@@ -1,10 +1,16 @@
 <script>
 	import BodyParts from "./views/BodyParts.svelte";
 	import DemoView from "./views/DemoView.svelte";
+	import {onMount} from "svelte";
+	let wind = null;
+
+	onMount(async ()=>{
+		wind = window;
+	});
 </script>
 
 <main>
-	<BodyParts/>
+	<BodyParts window={window}/>
 	<DemoView/>
 	<div id="test"></div>
 </main>

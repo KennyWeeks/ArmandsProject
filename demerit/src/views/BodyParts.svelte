@@ -10,8 +10,14 @@
     var points;
     var assigner;
     var inputs;
+    export let window;
+
+    var printCommand = ()=>{
+        window.print()
+    }
 
     onMount(async ()=>{
+        window = window;
         textArea = document.getElementsByTagName("textarea")[0];
         time = document.getElementById("time");
         points = document.getElementById("demerit-points");
@@ -34,6 +40,8 @@
         points.innerText = inputs[0].value;
         time.innerText = inputs[1].value;
         assigner.innerText = inputs[3].value;
+
+        printCommand();
     }}/>
 </div>
 
