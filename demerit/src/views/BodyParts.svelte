@@ -14,14 +14,35 @@
 
     var printCommand = ()=>{
         let mainContent = document.getElementById("main-component");
-        /*let height = 8.5 * 96;
+        let CurrentArray = Array.from(mainContent.childNodes);
+        CurrentArray = CurrentArray.filter((val)=>{return val.data != " "})
+
+        //Create the new window
+        let height = 8.5 * 96;
         let width = 11 * 96;
-        var newWindow = window.open("", "PRINT", `height=${height}px, width=${width}px`);
+        let newWindow = window.open("", "PRINT", `height=${height}px, width=${width}px`);
+
+        //Add the main-component to the new page
         newWindow.document.write("<div id='main-component'></div>");
-        var testing = newWindow.document.getElementById("main-component");
-        console.log(mainContent.getAttribute("style"));
-        testing.setAttribute("style", mainContent.getAttribute("style"));*/
-        console.log()
+        let newMainComponent = newWindow.document.getElementById("main-component");
+
+        //Save the content to the new window
+        newMainComponent.innerHTML = mainContent.innerHTML; 
+        let newMainArray = Array.from(newMainComponent.childNodes);
+
+        //Parse the array
+        newMainArray = newMainArray.filter((val)=>{return val.data != " "})
+
+        //Save the current styles to the new page
+        newMainComponent.setAttribute("style", mainContent.getAttribute("style"));
+
+        //Save the inner components styles from this page to the new page
+        for(let i = 0; i < newMainArray.length; i++) {
+            newMainArray[i].setAttribute("style", CurrentArray[i].getAttribute("style"));
+        }
+
+        newWindow.focus();
+        
         /*var t = window.getComputedStyle(mainContent);
         console.log(t);
         for(let key in t) {
