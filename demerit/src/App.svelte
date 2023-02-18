@@ -39,6 +39,12 @@
 			left:0px;
 			top:0px;
 			overflow:scroll;
+
+			& p {
+				margin-left:10px;
+				margin-bottom:0px;
+				text-decoration:underline;
+			}
 		}
 
 		#live-preview {

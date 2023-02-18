@@ -43,21 +43,6 @@
 
         newWindow.focus();
         
-        /*var t = window.getComputedStyle(mainContent);
-        console.log(t);
-        for(let key in t) {
-            //console.log(key + " -> " + t[key]);
-            if(key == "height") {
-                let h = (parseInt(t[key]) - 2 * 96) 
-                let string = key + ": " + h + "; box-shadow: inset 0 0 0 1px #000;";
-                testing.style.cssText = string;
-            }
-        }*/
-        //testing.innerHTML = mainContent.innerHTML;
-        //newWindow.document.write(mainContent.innerHTML);
-        //var testing = newWindow.document.getElementById("main-component");
-        //console.log(testing);
-        //newWindow.focus();
     }
 
     onMount(async ()=>{
@@ -65,8 +50,10 @@
         textArea = document.getElementsByTagName("textarea")[0];
         time = document.getElementById("time");
         points = document.getElementById("demerit-points");
-        inputs = document.getElementsByTagName("input");
         assigner = document.getElementById("assigned");
+
+        //This tag works on the input
+        inputs = document.getElementsByTagName("input");
         
     });
 
@@ -76,7 +63,6 @@
 
     <Input labelTag="Demerit-points" type="number" def="0" min={0}/><br>
     <Input labelTag="Time" type="time"/><br>
-    <Input labelTag="Infaction"/><br>
     <Input labelTag="Who-assigned-the-demerit" def="Captain ..."/><br>
     <TextArea/>
     <br>
@@ -84,8 +70,7 @@
         console.log(textArea.value)
         points.innerText = inputs[0].value;
         time.innerText = inputs[1].value;
-        assigner.innerText = inputs[3].value;
-
+        assigner.innerText = inputs[2].value;
         printCommand();
     }}/>
 </div>
@@ -94,7 +79,7 @@
 
     .bodypart {
         padding:10px;
-        border:2px solid #000;
+        width:480px;
         position:absolute;
     }
 

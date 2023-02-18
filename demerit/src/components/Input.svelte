@@ -15,6 +15,7 @@
 
     label {
         display:inline-block;
+        margin-bottom:10px;
     }
 
     input {

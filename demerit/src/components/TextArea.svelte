@@ -1,13 +1,18 @@
 <script></script>
 
 <label for="textarea">Type demerit details here</label>
-<textarea name="textarea" cols="50" rows="20"></textarea>
+<textarea name="textarea" rows="20"></textarea>
 
 <style lang="scss">
+
+    label {
+        margin-bottom:10px;
+    }
 
     textarea[name="textarea"] {
         border-radius:5px;
         resize:none;
+        width:480px;
     }
 
     textarea[name="textarea"]:focus {
