@@ -10,17 +10,45 @@
 </script>
 
 <main>
-	<BodyParts window={window}/>
-	<DemoView/>
-	<div id="test"></div>
+	<div id="main-area">
+		<div id="editor-area">
+
+			<p>Write your data here</p>
+
+			<BodyParts window={window}/>
+		</div>
+		<div id="live-preview">
+			<!--<DemoView/>-->
+		</div>
+	</div>
 </main>
 
-<style>
+<style lang="scss">
 
-	#test {
-		height:50px;
-		width:100px;
-		position:absolute;
-		top:calc(100vh + (11*96px));
+	$height:100vh;
+
+	#main-area {
+		width:100vw;
+		height:$height;
+		position:relative;
+
+		#editor-area {
+			width:500px;
+			height:$height;
+			position:absolute;
+			left:0px;
+			top:0px;
+			overflow:scroll;
+		}
+
+		#live-preview {
+			width:calc(100vw - 500px);
+			height:$height;
+			position:absolute;
+			right:0px;
+			top:0px;
+			background-color:rgba(128, 128, 128, 0.4);
+		}
 	}
+	
 </style>
