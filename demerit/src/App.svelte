@@ -19,7 +19,13 @@
 		</div>
 		<div id="live-preview">
 
-			<DemoView/>
+			<div id="inner-body">
+
+				<DemoView/>
+
+			</div>
+
+			<!--<DemoView/>-->
 
 			<!--<DemoView/>-->
 		</div>
@@ -62,6 +68,11 @@
 			-webkit-scrollbar:none;
 			-moz-scrollbar:none;
 			scrollbar-width:none;
+
+			#inner-body {
+				display:inline-block;
+				padding:25px;
+			}
 		}
 	}
 	
