@@ -3,14 +3,37 @@
 	import DemoView from "./views/DemoView.svelte";
 	import {onMount} from "svelte";
 	let wind = null;
+	let toggle = 0;
 
 	onMount(async ()=>{
 		wind = window;
+		window.addEventListener("resize", ()=>{
+			let ea = document.getElementById("editor-area");
+			let ct = document.getElementById("close-tab");
+			ea.removeAttribute("style");
+			ct.removeAttribute("style");
+		});
 	});
 </script>
 
 <main>
 	<div id="main-area">
+
+		<div id="close-tab" on:click={(e)=>{
+			let ea = document.getElementById("editor-area");
+			let ct = document.getElementById("close-tab");
+			if(toggle == 0) {
+				ea.style.left = "-100vw";
+				ct.style.right = "calc(100vw - 50px)";
+				toggle+=1;
+			} else {
+				ea.style.left = "0vw";
+				ct.style.right = "-50px";
+				toggle-=1;
+			}
+			
+		}}></div>
+	
 		<div id="editor-area">
 
 			<p>Write your data here</p>
@@ -87,6 +110,19 @@
 			overflow:hidden;
 			position:relative;
 
+			#close-tab {
+				width:100px;
+				height:50px;
+				border-radius:15px;
+				position:fixed;
+				top:10px;
+				right:-50px;
+				box-shadow:0 0 5px rgba(0,0,0,0.3);
+				background-color:#fff;
+				z-index:1000000000;
+				transition:right .5s linear;
+			}
+
 			#editor-area {
 				width:100vw;
 				height:100vh;
@@ -96,11 +132,13 @@
 				z-index:1000000;
 				background-color:#fff;
 				overflow:scroll;
+				scrollbar-width:none;
+				transition:left .5s linear;
 
 				& p {
 					margin-left:10px;
 					margin-bottom:0px;
-					text-decoration:underline;
+					font-size:20px;
 				}
 			}
 		}
