@@ -41,19 +41,19 @@ margin:100px; overflow:hidden; background-color:#fff;">
 
         <div class="itemblocks" id="test" style="font-size:18px; margin-bottom:0px; flex-grow:2;">
 
-            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">Name</h3>
+            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">Name <span id="name-text"></span></h3>
 
         </div>
 
         <div class="itemblocks" style="font-size:18px; margin-bottom:0px; flex-grow:1;">
 
-            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">Date</h3>
+            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">Date <span id="date-text"></span></h3>
 
         </div>
 
         <div class="itemblocks" style="font-size:18px; margin-bottom:0px; flex-grow:1;">
 
-            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">HR #</h3>
+            <h3 class="description" style="margin-bottom:0px; font-weight:normal;">HR # <span id="number-text"></span></h3>
 
         </div>
 
@@ -70,7 +70,7 @@ margin:100px; overflow:hidden; background-color:#fff;">
             margin-left:96px;
             font-size:15.25px;-->
 
-    <p id="infraction-starting-line" style="width:calc(6.5*96px); margin-left:96px; font-size:15.25px;">I earned <span id="demerit-points">(#)</span> demerit points at approximately <span id="time">(time)</span> for a/an <span id="infraction-space">(infraction)</span>. <span id="assigned">(Who assigned
+    <p id="infraction-starting-line" style="width:calc(6.5*96px); margin-left:96px; font-size:15.25px;">I earned <span id="demerit-points">(#)</span> demerit points at approximately <span id="time">(time)</span> for a/an <span id="infraction-space">infraction</span>. <span id="assigned">(Who assigned
     you the demerits, if Capt. Spell out Captain)</span> assigned me this demerit report because <span id="demerit-description">...</span></p>
 
     <!--width:calc(6.5*96px + 2px);

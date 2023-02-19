@@ -10,6 +10,10 @@
     var points;
     var assigner;
     var inputs;
+    var desc;
+    var name;
+    var date;
+    var hrNum;
     export let window;
 
     var printCommand = ()=>{
@@ -51,7 +55,10 @@
         time = document.getElementById("time");
         points = document.getElementById("demerit-points");
         assigner = document.getElementById("assigned");
-
+        desc = document.getElementById("demerit-description");
+        name = document.getElementById("name-text");
+        date = document.getElementById("date-text");
+        hrNum = document.getElementById("number-text");
         //This tag works on the input
         inputs = document.getElementsByTagName("input");
         
@@ -72,11 +79,14 @@
     <TextArea/>
     <br>
     <Button printbutton={true} buttonText={"print"} on:click={()=>{
-        console.log(textArea.value)
-        points.innerText = inputs[0].value;
-        time.innerText = inputs[1].value;
-        assigner.innerText = inputs[2].value;
-        printCommand();
+        name.innerText = inputs[0].value;
+        date.innerText = inputs[1].value;
+        hrNum.innerText = inputs[2].value;
+        points.innerText = inputs[3].value;
+        time.innerText = inputs[4].value;
+        assigner.innerText = inputs[5].value;
+        desc.innerText = textArea.value;
+        //printCommand();
     }}/>
 </div>
 
