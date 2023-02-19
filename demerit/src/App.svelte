@@ -18,6 +18,9 @@
 			<BodyParts window={window}/>
 		</div>
 		<div id="live-preview">
+
+			<DemoView/>
+
 			<!--<DemoView/>-->
 		</div>
 	</div>
@@ -39,6 +42,7 @@
 			left:0px;
 			top:0px;
 			overflow:scroll;
+			scrollbar-width:none;
 
 			& p {
 				margin-left:10px;
@@ -54,6 +58,10 @@
 			right:0px;
 			top:0px;
 			background-color:rgba(128, 128, 128, 0.4);
+			overflow:scroll;
+			-webkit-scrollbar:none;
+			-moz-scrollbar:none;
+			scrollbar-width:none;
 		}
 	}
 	

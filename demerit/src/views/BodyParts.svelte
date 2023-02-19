@@ -61,9 +61,14 @@
 
 <div class="bodypart">
 
+    <Input labelTag="Name"/><br>
+    <Input labelTag="Date" type="date"/><br>
+    <Input labelTag="HR-Number"/><br>
+    <hr>
     <Input labelTag="Demerit-points" type="number" def="0" min={0}/><br>
     <Input labelTag="Time" type="time"/><br>
     <Input labelTag="Who-assigned-the-demerit" def="Captain ..."/><br>
+    <hr>
     <TextArea/>
     <br>
     <Button printbutton={true} buttonText={"print"} on:click={()=>{

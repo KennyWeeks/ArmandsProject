@@ -18,8 +18,8 @@ just copy the style strings over-->
         overflow:hidden;
         background-color:#00ff00;-->
 
-<div id="main-component" style="width:calc(8.5*96px); height:calc(11*96px); box-shadow:inset 0 0 0 1px #000; position:absolute; top:100vh;
-left:50%; transform:translate(-50%); margin-bottom:10px; overflow:hidden;">
+<div id="main-component" style="width:calc(8.5*96px); height:calc(11*96px); position:relative; 
+margin:100px; overflow:hidden; background-color:#fff;">
 
     <!--margin-top:calc(1*96px);
             margin-left:calc(1*96px);
