@@ -75,6 +75,7 @@
 				top:0px;
 				overflow:scroll;
 				scrollbar-width:none;
+				background-color:#fff;
 
 				& p {
 					margin-left:10px;
@@ -140,6 +141,17 @@
 					margin-bottom:0px;
 					font-size:20px;
 				}
+			}
+
+			#live-preview {
+				width:100vw;
+				height:100vh;
+				overflow:scroll;
+				-webkit-scrollbar:none;
+				-moz-scrollbar:none;
+				scrollbar-width:none;
+				background-color:rgba(128, 128, 128, 0.4);
+
 			}
 		}
 	}

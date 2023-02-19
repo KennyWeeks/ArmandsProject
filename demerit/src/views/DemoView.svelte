@@ -110,4 +110,12 @@ margin:100px; overflow:hidden; background-color:#fff;">
 
 </div>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+    @media only screen and (max-width:500px) {
+        #main-component {
+            transform:scale(0.5);
+        }
+    }
+
+</style>
