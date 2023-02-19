@@ -8,7 +8,9 @@
 </script>
 
 <label for="{labelTag}">{labelTag.replace(/-/g, " ")}</label><br>
-<input type="{type}" name="{labelTag}" class="inputtag" placeholder="{def}" min={min}  required/>
+<input type="{type}" name="{labelTag}" class="inputtag" placeholder="{def}" min={min}  required on:focus="{(e)=>{
+    e.target.style.outlineStyle = "none";
+}}"/>
 
 
 <style lang="scss">
