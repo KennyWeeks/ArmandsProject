@@ -59,57 +59,68 @@
 
 <style lang="scss">
 
+	$width:100vw;
 	$height:100vh;
+
+	#main-area {
+		width:100vw;
+		height:$height;
+		position:relative;
+
+		#editor-area {
+			position:absolute;
+			left:0px;
+			top:0px;
+			overflow:scroll;
+			-webkit-scrollbar:none;
+			-moz-scrollbar:none;
+			scrollbar-width:none;
+			background-color:#fff;
+			z-index:1000000;
+
+			& p {
+				margin-left:10px;
+				margin-bottom:0px;
+				font-size:20px;
+			}
+		}
+
+		#live-preview {		
+			position:absolute;
+			right:0px;
+			top:0px;
+			background-color:rgba(128, 128, 128, 0.4);
+			overflow:scroll;
+			-webkit-scrollbar:none;
+			-moz-scrollbar:none;
+			scrollbar-width:none;
+
+			#inner-body {
+				display:inline-block;
+				padding:25px;
+			}
+		}
+	}
 
 	@media only screen and (min-width:501px) {
 		#main-area {
-			width:100vw;
-			height:$height;
-			position:relative;
 
 			#editor-area {
 				width:500px;
 				height:$height;
-				position:absolute;
-				left:0px;
-				top:0px;
-				overflow:scroll;
-				scrollbar-width:none;
-				background-color:#fff;
-
-				& p {
-					margin-left:10px;
-					margin-bottom:0px;
-					font-size:20px;
-				}
 			}
 
 			#live-preview {
 				width:calc(100vw - 500px);
 				height:$height;
-				position:absolute;
-				right:0px;
-				top:0px;
-				background-color:rgba(128, 128, 128, 0.4);
-				overflow:scroll;
-				-webkit-scrollbar:none;
-				-moz-scrollbar:none;
-				scrollbar-width:none;
-
-				#inner-body {
-					display:inline-block;
-					padding:25px;
-				}
 			}
+			
 		}
 	}
 
 	@media only screen and (max-width:500px) {
 		#main-area {
-			width:100vw;
-			height:$height;
 			overflow:hidden;
-			position:relative;
 
 			#close-tab {
 				width:100px;
@@ -125,33 +136,14 @@
 			}
 
 			#editor-area {
-				width:100vw;
-				height:100vh;
-				position:absolute;
-				top:0px;
-				left:0px;
-				z-index:1000000;
-				background-color:#fff;
-				overflow:scroll;
-				scrollbar-width:none;
+				width:$width;
+				height:$height;
 				transition:left .5s linear;
-
-				& p {
-					margin-left:10px;
-					margin-bottom:0px;
-					font-size:20px;
-				}
 			}
 
 			#live-preview {
-				width:100vw;
-				height:100vh;
-				overflow:scroll;
-				-webkit-scrollbar:none;
-				-moz-scrollbar:none;
-				scrollbar-width:none;
-				background-color:rgba(128, 128, 128, 0.4);
-
+				width:$width;
+				height:$height;
 			}
 		}
 	}
