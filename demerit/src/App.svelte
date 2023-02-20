@@ -118,6 +118,22 @@
 		}
 	}
 
+	@media only screen and (max-width:calc(500px + 8.5*96px)) and (min-width:501px) {
+		#close-tab {
+			width:50px;
+			height:50px;
+			border-top-right-radius:15px;
+			border-bottom-right-radius:15px;
+			position:fixed;
+			top:10px;
+			left:500px;
+			box-shadow:0 0 5px rgba(0,0,0,0.3);
+			background-color:#fff;
+			z-index:100000;
+			transition:right .5s linear;
+		}
+	}
+
 	@media only screen and (max-width:500px) {
 		#main-area {
 			overflow:hidden;
@@ -131,7 +147,7 @@
 				right:-50px;
 				box-shadow:0 0 5px rgba(0,0,0,0.3);
 				background-color:#fff;
-				z-index:1000000000;
+				z-index:10000000000000;
 				transition:right .5s linear;
 			}
 
