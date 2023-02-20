@@ -132,6 +132,10 @@
 			z-index:100000;
 			transition:right .5s linear;
 		}
+
+		#inner-body {
+			filter:blur(8px);
+		}
 	}
 
 	@media only screen and (max-width:500px) {
