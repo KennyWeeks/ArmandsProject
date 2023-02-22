@@ -132,10 +132,23 @@
             textArea.style.outlineColor = "#ff0000";
         }
 
+        let select = Array.from(document.querySelectorAll("select"));
+
+        let timeVal = "";
+        select.forEach((e)=>{
+            timeVal += e.value;
+            if(e.getAttribute("name") == "hours") {
+                timeVal += ":";
+            } else if(e.getAttribute("name") == "minutes") {
+                timeVal += " ";
+            }
+        });
+
         name.innerText = inputs[0].value; //This is the name that goes in the header
         date.innerText = inputs[1].value; //This is the date input
         hrNum.innerText = inputs[2].value; //This is the hr input
         points.innerText = inputs[3].value; //This is the point input
+        time.innerText = timeVal;
         assigner.innerText = inputs[4].value; //This will be who has assigned you the demerit
         //assigner.innerText = inputs[5].value;
         let char = textArea.value[0].toLowerCase();
