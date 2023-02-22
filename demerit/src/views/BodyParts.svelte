@@ -132,13 +132,15 @@
             textArea.style.outlineColor = "#ff0000";
         }
 
-        /*name.innerText = inputs[0].value;
-        date.innerText = inputs[1].value;
-        hrNum.innerText = inputs[2].value;
-        points.innerText = inputs[3].value;
-        time.innerText = inputs[4].value;
-        assigner.innerText = inputs[5].value;
-        desc.innerText = textArea.value;*/
+        name.innerText = inputs[0].value; //This is the name that goes in the header
+        date.innerText = inputs[1].value; //This is the date input
+        hrNum.innerText = inputs[2].value; //This is the hr input
+        points.innerText = inputs[3].value; //This is the point input
+        time.innerText = inputs[4].value; //This will be who has assigned you the demerit
+        //assigner.innerText = inputs[5].value;
+        desc.innerText = textArea.value;
+
+        console.log(inputs);
         //printCommand();
     }}/>
 </div>
@@ -149,6 +151,7 @@
         padding:10px;
         width:480px;
         position:absolute;
+        background-color:#fff;
     }
     @media only screen and (max-width:500px) {
         .bodypart {
