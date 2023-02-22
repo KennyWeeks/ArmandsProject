@@ -119,13 +119,13 @@
         //the data isn't default
         console.log(inputs[0].value);
 
-        inputs.forEach((e)=>{
+        /*inputs.forEach((e)=>{
             console.log(e.getAttribute("type"));
             if(["text", "number"].indexOf(e.getAttribute("type")) >= 0 && e.value.length == 0) {
                 e.style.outlineStyle = "solid";
                 e.style.outlineColor = "#ff0000";
             }
-        });
+        });*/
         
         if(textArea.value.length == 0) {
             textArea.style.outlineStyle = "solid";
@@ -136,9 +136,12 @@
         date.innerText = inputs[1].value; //This is the date input
         hrNum.innerText = inputs[2].value; //This is the hr input
         points.innerText = inputs[3].value; //This is the point input
-        time.innerText = inputs[4].value; //This will be who has assigned you the demerit
+        assigner.innerText = inputs[4].value; //This will be who has assigned you the demerit
         //assigner.innerText = inputs[5].value;
-        desc.innerText = textArea.value;
+        let char = textArea.value[0].toLowerCase();
+        let val = new String(textArea.value);
+        val = char + val.substring(1);
+        desc.innerText = val;
 
         console.log(inputs);
         //printCommand();
