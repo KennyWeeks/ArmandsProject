@@ -7,14 +7,29 @@
 
 	onMount(async ()=>{
 		wind = window;
-		window.addEventListener("resize", ()=>{
+		/*window.addEventListener("resize", ()=>{
 			let ea = document.getElementById("editor-area");
 			let ct = document.getElementById("close-tab");
 			ea.removeAttribute("style");
 			ct.removeAttribute("style");
-		});
+		});*/
 	});
 </script>
+
+<svelte:window on:resize="{()=>{
+	let test = document.getElementById("main-component");
+	let livePreview = document.getElementById("live-preview");
+	let w = (8.5 * 96) * 0.5;
+	let h = (11 * 96) * 0.5;
+
+	if(livePreview.offsetWidth <= 8.5 * 96 && livePreview.offsetWidth >= w) {
+		let sc = 1 - 1 * (1 - livePreview.offsetWidth / (8.5 * 96));
+		console.log(sc);
+		test.style.transform = "scale(" + sc + ")";
+	}
+}}" on:click="{()=>{
+	alert("Hello");
+}}"/>
 
 <main>
 	<div id="main-area">
@@ -90,6 +105,7 @@
 			right:0px;
 			top:0px;
 			background-color:rgba(128, 128, 128, 0.4);
+			box-shadow:inset 0 0 0 10px #00ff00;
 			overflow:scroll;
 			-webkit-scrollbar:none;
 			-moz-scrollbar:none;
@@ -133,9 +149,9 @@
 			transition:right .5s linear;
 		}
 
-		#inner-body {
+		/*#inner-body {
 			filter:blur(8px);
-		}
+		}*/
 	}
 
 	@media only screen and (max-width:500px) {
